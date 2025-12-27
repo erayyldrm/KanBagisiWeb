@@ -1,0 +1,355 @@
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url("logo/arkaplan2.jpg");
+    background-size: cover;
+    min-height: 100vh; 
+    width: 100%;
+    margin: 0;
+    
+}
+
+.navbar {
+    background-color: #ff0000b9;
+    overflow: hidden;
+    width: 80%;
+    gap: 1px;  
+    display: flex;
+    align-items: center;
+    margin-left: 10%;
+    margin-right: 10%;  
+    margin-top: 20px;
+    height: 100px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.578), 0 6px 20px 0 rgba(183, 1, 1, 0.721);
+}
+
+.logo {
+    height: 90px;
+    width: 100px;
+    text-decoration: none;
+    margin-right: 150px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    
+}
+
+.Anasayfa {
+    font-size: 20px;
+    font-weight: bold;
+    height: 100px;
+    width: 150px;
+    text-decoration: none;
+    margin-right: 40px;
+    color: black;
+    display: flex;
+    align-items: center;
+    margin-left: -250px;
+
+    
+}
+
+
+.Bagis_Noktalari {
+    font-size: 20px;
+    font-weight: bold;
+    height: 100px;
+    width: 250px;
+    text-decoration: none;
+    margin-left: -50px;
+    color: black;
+    display: flex;
+    align-items: center;
+    
+}
+
+.Profil {
+    font-size: 20px;
+    font-weight: bold;
+    height: 70px;
+    width: 70px;
+    text-decoration: none;
+    margin-right: 10px;
+    color: black;
+    display: flex;
+    align-items: center;
+    
+}
+
+
+.faydalar-card {
+    background: rgba(0,0,0,0.45);
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+.faydalar-card h2 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+.faydalar-list {
+    color: #fff;
+    margin: 0;
+    padding-left: 0;
+    column-gap: 30px;
+}
+.faydalar-list li {
+    margin: 10px 0;
+    line-height: 1.6;
+    display: flex;
+    align-items: flex-start;
+}
+.faydalar-list li i {
+    color: #c00000;
+    margin-right: 10px;
+    font-size: 1.05em;
+    min-width: 20px;
+}
+
+
+
+
+.hero-section {
+    position: relative;
+    padding: 150px 5% 100px;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: 0;
+}
+.hero-content { 
+z-index: 2; 
+}
+
+.hero-title{ 
+    font-size: 3.2rem; 
+    color: #fff; 
+    font-weight: 900; 
+    text-shadow: 0 2px 12px rgba(0,0,0,0.6); 
+}
+.hero-sub{ 
+    color: #fff; 
+    font-size: 1.1rem; 
+    opacity: 0.95; 
+    text-shadow: 0 1px 8px rgba(0,0,0,0.45); 
+}
+
+
+.hero-visual{ 
+    width: 100%; 
+    max-width: 320px; 
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.6)); 
+}
+
+
+.hero-visual-col{ 
+    z-index:2; 
+}
+
+
+.hero-content {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: -80px;
+}
+
+.hero-content h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.hero-content p {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    color: #d1d1d1;
+}
+
+
+.motivation-section {
+    padding: 40px 5%;
+    text-align: center;
+    
+}
+
+.motivation-card {
+    background-color: rgba(33, 33, 33, 0.85);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #c00000; 
+    width: 100%;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.35);
+    margin-top: -50px;
+}
+
+
+.mini-bilgi-kart {
+    background-color: rgba(33, 33, 33, 0.85);
+    padding: 18px;
+    border-radius: 10px;
+    border-left: 5px solid #c00000;
+    box-shadow: 0 8px 12px rgba(0,0,0,0.25);
+}
+.mini-kart {
+    margin-top: 4px;
+}
+.mini-kart .bilgi-başlık {
+    font-weight: 700;
+}
+.mini-kart .adım {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin: 10px 0;
+
+}
+
+
+.adım-aşama {
+     background-color: #c00000;
+    background-color: #c00000;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+.adım-metin {
+    color: #fff;
+}
+
+
+
+.motivation-card h2 {
+    color: #c00000;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+}
+
+.motivation-card p {
+    font-size: 1.1em;
+}
+
+
+.statistics-section {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.statistics-section h2 {
+    font-size: 2.2em;
+    margin-bottom: 40px;
+    color: #c00000;
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.sebep-card {
+    flex: 1;
+    min-width: 250px;
+    background-color: #242424;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #c00000;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.sebep-card:hover {
+    background-color: #333333;
+    transform: translateY(-5px);
+}
+
+.sebep-card h3 {
+    font-size: 1.8em;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.sebep-card p {
+    font-size: 1.1em;
+    color: #cccccc;
+}
+
+
+.hero-visual {
+    color: #c00000; 
+    font-size: 5em; 
+    margin-bottom: 25px;
+   
+    text-shadow: 0 0 15px rgba(192, 0, 0, 0.7); 
+}
+
+
+@media (max-width: 768px) {
+    .hero-visual {
+        font-size: 4em;
+    }
+}
+@media (min-width: 768px) {
+    .faydalar-list {
+        column-count: 2;
+    }
+}
+@media (min-width: 768px) {
+    .motivation-card, .faydalar-card, .mini-bilgi-kart {
+        height: 100%;
+    }
+    .row.align-items-stretch .col-md-6 {
+        display: flex;
+        flex-direction: column;
+    }
+    .motivation-card, .faydalar-card, .mini-bilgi-kart {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 3%;
+        flex-wrap: wrap;
+    }
+    
+    .navbar a {
+        padding: 0 10px;
+        font-size: 0.9em;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-section {
+        padding-top: 100px;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .sebep-card {
+        margin-bottom: 20px;
+    }
+}

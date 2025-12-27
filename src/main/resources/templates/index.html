@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html
+  lang="tr"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+
+    <title>Kan Bağışı</title>
+
+    <link
+      rel="icon"
+      href="/logo/health-tech.png"
+      type="image/png"
+      class="icon"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" th:href="@{/index.css}" href="/index.css" />
+    <link rel="stylesheet" href="footer.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a class="logo" href="/">
+        <img src="/logo/health-tech.png" alt="Logo" class="logo" />
+      </a>
+      <a href="/" class="Anasayfa">Anasayfa</a>
+      <a href="/bagis" class="Bagis_Noktalari">Bağış Noktaları</a>
+      <a href="/Profil">
+        <img src="/logo/user.png" alt="Profil" class="Profil" />
+      </a>
+    </nav>
+    <main>
+      <section class="hero-section">
+        <div class="hero-content container">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <h1 class="hero-title">
+                HAYAT BAĞIŞLA BAŞLAR. SİZ DE BİR UMUT OLUN.
+              </h1>
+              <p class="hero-sub">
+                Kan bağışı yaparak, ihtiyacı olanlara umut olun ve yaşamlarına
+                dokunun. Sadece 45 dakikada hayata dokunabilirsiniz.
+              </p>
+            </div>
+            <div class="col-lg-5 text-center hero-visual-col">
+              <img
+                src="/logo/hero5.png"
+                alt="Blood donation visual"
+                class="hero-visual"
+                style="width: 320px; margin-left: 90px; margin-bottom: 130px"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="motivation-section">
+        <div class="container">
+          <div class="row align-items-stretch">
+            <div class="col-md-6 mb-4">
+              <div class="motivation-card">
+                <h2>BUGÜNÜN KAHRAMANI OLUN.</h2>
+                <p style="color: white">
+                  Bağışınız, sadece 24 saat içinde bir hastanın tedavisinde
+                  kullanılmaya başlar. Etkiyi hemen yaratın!
+                </p>
+              </div>
+              <div class="mini-bilgi-kart mt-3">
+                <div class="mini-kart">
+                  <h3
+                    class="bilgi-başlık"
+                    style="
+                      color: #ff0000aa;
+                      font-size: 1.15rem;
+                      margin-bottom: 10px;
+                    "
+                  >
+                    Nasıl bağış yaparım?
+                  </h3>
+                  <div class="adım">
+                    <div class="adım-aşama">1</div>
+                    <div class="adım-metin">
+                      En yakın bağış noktasını seç ve oraya git.
+                    </div>
+                  </div>
+                  <div class="adım">
+                    <div class="adım-aşama">2</div>
+                    <div class="adım-metin">Kısa sağlık formunu doldur.</div>
+                  </div>
+                  <div class="adım">
+                    <div class="adım-aşama">3</div>
+                    <div class="adım-metin">
+                      Bağışını gerçekleştir ve kahraman ol.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 mb-4" id="faydalar">
+              <div class="motivation-card faydalar-card">
+                <h2>KAN BAĞIŞININ FAYDALARI</h2>
+                <ul class="faydalar-list list-unstyled">
+                  <li>
+                    <i class="fa fa-check-circle" aria-hidden="true"></i> Hayat
+                    kurtarır – acil durumlarda hayati öneme sahiptir
+                  </li>
+                  <li>
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    Toplumsal dayanışmayı artırır ve kan stoklarını destekler
+                  </li>
+                  <li>
+                    <i class="fa fa-check-circle" aria-hidden="true"></i> Bağış
+                    öncesi yapılan sağlık kontrolleri, erken teşhis imkanı verir
+                  </li>
+                  <li>
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    Düzenli bağış, kan hücrelerinin üretimini ve yenilenmesini
+                    teşvik eder
+                  </li>
+                  <li>
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    Vücutta fazla demirin azalmasına yardımcı olur
+                  </li>
+                  <li>
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    Psikolojik fayda sağlar – bağış yapanlar kendilerini iyi
+                    hisseder
+                  </li>
+                  <li>
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    Küresel acil durumlara daha hazırlıklı olmamıza yardımcı
+                    olur
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="statistics-section">
+        <h2>Neden Hemen Bağış Yapmalısınız?</h2>
+        <div class="card-container">
+          <div class="sebep-card">
+            <h3>
+              <i
+                class="fa fa-heart"
+                style="color: #c00000; margin-right: 8px"
+              ></i>
+              Etki
+            </h3>
+            <p>Her Bağışla 3 Kişiye Can Verin</p>
+          </div>
+          <div class="sebep-card">
+            <h3>
+              <i
+                class="fa fa-bolt"
+                style="color: #c00000; margin-right: 8px"
+              ></i>
+              Aciliyet
+            </h3>
+            <p>Türkiye'de Her Saat Binlerce Üniteye İhtiyaç Var</p>
+          </div>
+          <div class="sebep-card">
+            <h3>
+              <i
+                class="fa fa-clock"
+                style="color: #c00000; margin-right: 8px"
+              ></i>
+              Süreç
+            </h3>
+            <p>Tüm Süreç Sadece 45 Dakikanızı Alır</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  <footer class="bagis-footer">
+    <div class="kb-container">
+      <div class="kb-col">
+        <h3>Kan Bağışı Platformu</h3>
+        <p>En yakın bağış noktalarını kolayca bul, hızlıca eriş.</p>
+      </div>
+
+      <div class="kb-col">
+        <h3>Sayfalar</h3>
+        <ul>
+          <li><a href="/">Ana Sayfa</a></li>
+          <li><a href="/bagis">Bağış Noktaları</a></li>
+          <li><a href="/editBagis">Yeni Nokta Ekle</a></li>
+        </ul>
+      </div>
+
+      <div class="kb-col">
+        <h3>Bize Ulaşın</h3>
+        <p>Email: .......@gmail.com</p>
+        <p>Telefon: +90 555 555 55 55</p>
+      </div>
+    </div>
+
+    <div class="kb-alt">© 2025 Kan Bağışı Platformu – Tüm Hakları Saklıdır</div>
+  </footer>
+</html>

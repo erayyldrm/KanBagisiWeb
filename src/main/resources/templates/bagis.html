@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="tr" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kan Bağışı</title>
+    <link
+      rel="icon"
+      href="/logo/health-tech.png"
+      type="image/png"
+      class="icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" th:href="@{/bagis.css}" href="/bagis.css" />
+    <link rel="stylesheet" href="footer.css" />
+  </head>
+  <style>
+    .actions-cell {
+      text-align: center;
+      width: 70px;
+    }
+
+    .actions-btn {
+      background: none;
+      border: none;
+      font-size: 26px;
+      font-weight: bold;
+      line-height: 1;
+      cursor: pointer;
+      padding: 5px 10px;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    .actions-btn:hover {
+      opacity: 0.7;
+    }
+  </style>
+  <body>
+    <nav class="navbar">
+      <a class="logo" href="/">
+        <img src="/logo/health-tech.png" alt="Logo" class="logo" />
+      </a>
+      <a href="/" class="Anasayfa">Anasayfa</a>
+      <a href="/bagis" class="Bagis_Noktalari">Bağış Noktaları</a>
+
+      <a href="/Profil">
+        <img src="/logo/user.png" alt="Profil" class="Profil" />
+      </a>
+    </nav>
+    <div class="container mt-4">
+      <a href="/yeniBagis" class="btn" id="ekleButton">
+        <img src="/logo/ekle.svg" width="50" height="30" alt="Ekle" />
+      </a>
+      <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>İSİM</th>
+              <th>TELEFON</th>
+              <th>ADRES</th>
+              <th>DURUM</th>
+              <th>ACTIONS</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr th:each="bagis : ${bagisList}">
+              <td th:text="${bagis.id}"></td>
+              <td th:text="${bagis.isim}"></td>
+              <td th:text="${bagis.telefon}"></td>
+              <td th:text="${bagis.adres}"></td>
+              <td
+                th:text="${bagis.durum}"
+                th:class="${bagis.durum == 'UYGUN'} ? 'text-success' :
+              (${bagis.durum == 'BAĞIŞ ALMIYOR'} ? 'text-danger' :
+              (${bagis.durum == 'GEÇİCİ'} ? 'text-warning' : ''))"
+              ></td>
+
+              <td class="actions-cell">
+                <div class="dropdown">
+                  <button
+                    class="actions-btn"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                  >
+                    ...
+                  </button>
+
+                  <ul class="dropdown-menu dropdown-menu-end">
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        th:href="@{'/editBagis/' + ${bagis.id}}"
+                      >
+                        Düzenle
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item text-danger delete-action"
+                        href="#"
+                        th:data-url="@{'/silBagis/' + ${bagis.id}}"
+                      >
+                        Sil
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const deleteLinks = document.querySelectorAll(".delete-action");
+
+        deleteLinks.forEach((link) => {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const deleteUrl = this.getAttribute("data-url");
+
+            Swal.fire({
+              title: "Silmek istediğinize emin misiniz?",
+              text: "Bu işlem geri alınamaz!",
+              icon: "warning",
+              showCancelButton: true,
+              confirmButtonColor: "#d33",
+              cancelButtonColor: "#6c757d",
+              confirmButtonText: "Sil",
+              cancelButtonText: "İptal",
+            }).then((result) => {
+              if (result.isConfirmed) {
+                window.location.href = deleteUrl;
+              }
+            });
+          });
+        });
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script th:if="${successMessage != null}" th:inline="javascript">
+      Swal.fire({
+        icon: "success",
+        title: "Ekleme Başarılı",
+        text: "İşlem tamamlandı",
+        timer: 1200,
+        showConfirmButton: false,
+      });
+    </script>
+    <script th:if="${editMessage != null}" th:inline="javascript">
+      Swal.fire({
+        icon: "success",
+        title: "Güncelleme Başarılı",
+        text: "İşlem tamamlandı",
+        timer: 1200,
+        showConfirmButton: false,
+      });
+    </script>
+    <script th:if="${silMessage != null}" th:inline="javascript">
+      Swal.fire({
+        icon: "success",
+        title: "Silme Başarılı",
+        text: "İşlem tamamlandı",
+        timer: 1200,
+        showConfirmButton: false,
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+  <footer class="bagis-footer">
+    <div class="kb-container">
+      <div class="kb-col">
+        <h3>Kan Bağışı Platformu</h3>
+        <p>En yakın bağış noktalarını kolayca bul, hızlıca eriş.</p>
+      </div>
+
+      <div class="kb-col">
+        <h3>Sayfalar</h3>
+        <ul>
+          <li><a href="/">Ana Sayfa</a></li>
+          <li><a href="/bagis">Bağış Noktaları</a></li>
+          <li><a href="/editBagis">Yeni Nokta Ekle</a></li>
+        </ul>
+      </div>
+
+      <div class="kb-col">
+        <h3>Bize Ulaşın</h3>
+        <p>Email: .....@gmail.com</p>
+        <p>Telefon: +90 555 555 55 55</p>
+      </div>
+    </div>
+
+    <div class="kb-alt">© 2025 Kan Bağışı Platformu – Tüm Hakları Saklıdır</div>
+  </footer>
+</html>

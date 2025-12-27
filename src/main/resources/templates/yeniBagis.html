@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html
+  lang="tr"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org"
+>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yeni Bagis</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" th:href="@{/bagis.css}" href="/bagis.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a class="logo" href="/">
+        <img src="/logo/health-tech.png" alt="Logo" class="logo" />
+      </a>
+      <a href="/" class="Anasayfa">Anasayfa</a>
+      <a href="/bagis" class="Bagis_Noktalari">Bağış Noktaları</a>
+
+      <a href="/Profil">
+        <img src="/logo/user.png" alt="Profil" class="Profil" />
+      </a>
+    </nav>
+    <div class="container mt-4">
+      <h2 style="width: auto; margin-left: 12%; color: white; margin-top: 30px">
+        Yeni Bağış Noktası Ekle
+      </h2>
+
+      <form
+        action="#"
+        method="post"
+        th:action="@{/savebagis}"
+        th:object="${Bagis}"
+      >
+        <div>
+          <input
+            th:field="*{isim}"
+            type="text"
+            class="form-control"
+            placeholder="İsim"
+            required
+            style="width: 72%; height: 40px; margin-top: 20px; margin-left: 12%"
+          />
+        </div>
+        <div>
+          <input
+            th:field="*{telefon}"
+            type="text"
+            class="form-control"
+            placeholder="Telefon Numarası"
+            required
+            pattern="^(\d{10,11}|(\d{3} \d{3} \d{2} \d{2})|(\d{4} \d{3} \d{4}))"
+            title="Telefon numarası 10 veya 11 basamaklı olmalıdır."
+            style="width: 72%; height: 40px; margin-top: 5px; margin-left: 12%"
+          />
+        </div>
+        <div>
+          <input
+            th:field="*{adres}"
+            type="text"
+            class="form-control"
+            placeholder="Adres"
+            required
+            style="width: 72%; height: 40px; margin-top: 5px; margin-left: 12%"
+          />
+        </div>
+        
+          <select
+            th:field="*{durum}"
+            type="text"
+            class="form-control"
+            placeholder="Durum"
+            required
+            style="width: 72%; height: 40px; margin-top: 5px; margin-left: 12%"
+          >
+            <option value="UYGUN">UYGUN</option>
+            <option value="BAĞIŞ ALMIYOR">BAĞIŞ ALMIYOR</option>
+            <option value="GEÇİCİ">GEÇİCİ</option>
+          </select>
+        </div>
+        <div>
+          <button
+            type="submit"
+            class="form-control btn btn-success"
+            value="Kaydet"
+            style="width: 8%; height: 40px; margin-top: 20px; margin-left: 71%"
+          >
+            KAYDET
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+      integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.8/jquery.inputmask.min.js"></script>
+  </body>
+</html>
