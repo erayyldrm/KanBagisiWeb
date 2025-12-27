@@ -44,7 +44,8 @@ kolaylaştırmak amacıyla geliştirilmiştir.
 
 <img width="731" height="479" alt="image" src="https://github.com/user-attachments/assets/eb611ec4-f248-45cc-8a3c-f1e09024d097" />
 
-![Uploading image.png…]()
+<img width="773" height="479" alt="image" src="https://github.com/user-attachments/assets/b0481b35-e7e0-42c9-b168-1a736ff8fd61" />
+
 
 
 
