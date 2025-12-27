@@ -70,6 +70,9 @@ public class HomeController {
     silindiPopup.addFlashAttribute("silMessage","Silme işlemi başarılı");
     return "redirect:/bagis";
    }
-   
+   @GetMapping("/Profil")
+   public String profil() {
+       return "Profil";
+   }
 }
 
