@@ -42,6 +42,10 @@ kolaylaştırmak amacıyla geliştirilmiştir.
 
 <img width="753" height="593" alt="image" src="https://github.com/user-attachments/assets/a8187cb9-792f-4c7e-8ce3-679895ee2e79" />
 
+<img width="731" height="479" alt="image" src="https://github.com/user-attachments/assets/eb611ec4-f248-45cc-8a3c-f1e09024d097" />
+
+![Uploading image.png…]()
+
 
 
 
